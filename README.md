@@ -51,19 +51,37 @@ ii. Observe the Virtual Network within Network Watcher
 Part 2 (Observe ICMP Traffic) <br>
 A. Use Remote Desktop to connect to your Windows 10 Virtual Machine <br>
 i. Within your Windows 10 Virtual Machine, Install Wireshark by using the browser and searchin "Wireshark download" <br>
-ii. Open Wireshark and filter for ICMP traffic only <br>
-B. Retrieve the private IP address of the Ubuntu VM and attempt to ping it from within the Windows 10 VM <br>
+ii. Open Wireshark and filter for ICMP traffic only. Under file button:-> "Start Capturing Packets" -> type ICMP into search box -> Enter <br>
+B. Retrieve the private IP address of the Ubuntu VM and attempt to ping it from within the Windows 10 VM suing CMD: ping (private IP address) <br>
 i. Observe ping requests and replies within WireShark <br>
-ii. From The Windows 10 VM, open command line or PowerShell and attempt to ping a public website (such as www.google.com) and observe the traffic in WireShark <br>
+ii. From The Windows 10 VM, open command line (CMD) or PowerShell and attempt to ping a public website (such as www.google.com) and observe the traffic in WireShark <br>
 C. Initiate a non-stop ping from your Windows 10 VM to your Ubuntu VM <br>
-i. Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic <br>
-ii. Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity <br>
+i. Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic: Ubuntu VM -> Network -> Add Inbound Port Rule -> ICMP -> Deny -> Add  <br>
+ii. Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity by pinging Ubuntu VM again <br>
 iii. Re-enable ICMP traffic for the Network Security Group your Ubuntu VM is using <br>
 iv. Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity (should start working) <br>
 V. Stop the ping activity
 </p>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="70%" width="70%" alt="Observing ICMP Traffic"/>
+<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/ca7e1b8c-fcef-41e5-89c8-63705bd70a26" height="70%" width="70%" alt="Observing ICMP Traffic"/>
+</p>
+<p>
+<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/94cf9728-9c36-458d-83c1-a310f6d2f7d7" height="70%" width="70%" alt="Observing ICMP Traffic"/>
+</p>
+<p>
+<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/ee3c6b20-2fbb-4cf6-b08a-7930a500ce91" height="70%" width="70%" alt="Observing ICMP Traffic"/>
+</p>
+<p>
+<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/aa99536a-0b4f-4f54-ac45-cdcb2b20beba" height="70%" width="70%" alt="Observing ICMP Traffic"/>
+</p>
+<p>
+<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/1e81aeb7-2603-46a0-a50c-38a900fe6f71" height="70%" width="70%" alt="Observing ICMP Traffic"/>
+</p>
+<p>
+<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/ca7e1b8c-fcef-41e5-89c8-63705bd70a26" height="70%" width="70%" alt="Observing ICMP Traffic"/>
+</p>
+<p>
+<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/ca7e1b8c-fcef-41e5-89c8-63705bd70a26" height="70%" width="70%" alt="Observing ICMP Traffic"/>
 </p>
 <br />
 
