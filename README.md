@@ -30,7 +30,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>Actions and Observations</h2>
 
 <p>
-Part 1 (Create your Resources)
+(Create your Resources)
 A. Create a Resource Group <br>
 i. Create a Windows 10 Pro Virtual Machine (VM), Version 22H - x64 Gen2: Virtual Machine -> Create -> Azure Virtual Machine <br>
 ii. While creating the VM, select the Resource Group you just created and the same Region. Size: 2 VPU's, 16GIB Memory <br>
@@ -48,7 +48,7 @@ ii. Observe the Virtual Network within Network Watcher
 <br />
 
 <p>
-Part 2 (Observe ICMP Traffic) <br>
+(Observe ICMP Traffic) <br>
 A. Use Remote Desktop to connect to your Windows 10 Virtual Machine <br>
 i. Within your Windows 10 Virtual Machine, Install Wireshark by using the browser and searchin "Wireshark download" <br>
 ii. Open Wireshark and filter for ICMP traffic only. Under file button:-> "Start Capturing Packets" -> type ICMP into search box -> Enter <br>
@@ -58,7 +58,7 @@ ii. From The Windows 10 VM, open command line (CMD) or PowerShell and attempt to
 C. Initiate a non-stop ping from your Windows 10 VM to your Ubuntu VM <br>
 i. Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic: Ubuntu VM -> Network -> Add Inbound Port Rule -> ICMP -> Deny -> Add  <br>
 ii. Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity by pinging Ubuntu VM again <br>
-iii. Re-enable ICMP traffic for the Network Security Group your Ubuntu VM is using <br>
+iii. Re-enable/Update ICMP traffic for the Network Security Group your Ubuntu VM is using <br>
 iv. Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity (should start working) <br>
 V. Stop the ping activity
 </p>
@@ -78,18 +78,17 @@ V. Stop the ping activity
 <img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/1e81aeb7-2603-46a0-a50c-38a900fe6f71" height="70%" width="70%" alt="Observing ICMP Traffic"/>
 </p>
 <p>
-<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/ca7e1b8c-fcef-41e5-89c8-63705bd70a26" height="70%" width="70%" alt="Observing ICMP Traffic"/>
-</p>
-<p>
-<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/ca7e1b8c-fcef-41e5-89c8-63705bd70a26" height="70%" width="70%" alt="Observing ICMP Traffic"/>
-</p>
 <br />
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+(Observe SSH Traffic) <br>
+Back in Wireshark, filter for SSH traffic only: Type "SSH" into search box -> enter -> start capturing packets <br>
+From your Windows 10 VM, “SSH into” your Ubuntu Virtual Machine (via its private IP address): ssh username@privateIPAddress -> yes (if prompted) -> enter -> password <br>
+Type commands (rmdir, mkdir, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark <br>
+Exit the SSH connection by typing ‘exit’ and pressing [Enter]
 </p>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/6a7858a1-636d-4933-8de5-40b0f3cb6e9b" height="70%" width="70%" alt="Observe SSH Traffic"/>
 </p>
 <br />
 
