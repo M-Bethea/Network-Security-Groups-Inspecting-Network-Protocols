@@ -93,41 +93,44 @@ Exit the SSH connection by typing ‘exit’ and pressing [Enter]
 <br />
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+(Observe DHCP Traffic) <br>
+Back in Wireshark, filter for DHCP traffic only <br>
+From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig /renew) <br>
+Observe the DHCP traffic appearing in WireShark 
 </p>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/c6fa9098-3a4d-442a-9317-13d7a1dba3a5" height="70%" width="70%" alt="Observe DHCP Traffic"/>
 </p>
 <br />
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+(Observe DNS Traffic) <br>
+Back in Wireshark, filter for DNS traffic only <br>
+From your Windows 10 VM within a command line, use nslookup to see what google.com and disney.com’s IP addresses are <br>
+Observe the DNS traffic being show in WireShark
 </p>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/a3809977-528b-4e60-b235-2067ab4d99f8" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+(Observe RDP Traffic) <br>
+Back in Wireshark, filter for RDP traffic only (tcp.port == 3389) <br>
+Oserve the immediate non-stop spam of traffic? Why do you think it’s non-stop spamming vs only showing traffic when you do an activity? <br>
+Answer: because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted. Even by just moving your mouse around
 </p>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/M-Bethea/azure-network-protocols/assets/139162550/ec987acc-1e23-44e6-978f-ae05aa2fe551" height="70%" width="70%" alt="Observe RDP Traffic"/>
 </p>
 <br />
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+A. Lab Cleanup (DON’T FORGET THIS) <br>
+i. Close your Remote Desktop connection <br>
+ii. Delete the Resource Group(s) created at the beginning of this lab <br>
+iii. Verify Resource Group Deletion
 </p>
 <br />
 
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="70%" width="70%" alt="Disk Sanitization Steps"/>
-</p>
-<br />
+
